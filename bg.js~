@@ -31,8 +31,7 @@ var updatePopupHtmlFile=function(){
 chrome.runtime.onMessage.addListener(
     function(request,sender,sendResponse){
        // alert('hi');
-	var x=request.inComingData || "";
-        if (x != ""){
+        if (request.inComingData != ""){
             var dataString=request.inComingData;
             storeData(dataString);
             //updatePopupHtmlFile();
