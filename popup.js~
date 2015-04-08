@@ -21,7 +21,7 @@ for (var i=0;i<total;i++) {
     //alert(String(innerHtmlString));
 
     
-/////////////////////////////////////////    
+///////////////////////////////////////// ////////////////////////////////////////////////////////////////////////////   
 var onclickImage=function(){
     
     var i=Number(this.id)
@@ -51,7 +51,7 @@ var onDownloadClick=function(){
     //download the complete file
     var txt=''
     for (var i=0;i<total;i++) {
-        if (w.localStorage[total-1-i] !="") txt +=w.localStorage[total-1-i]+"\n\n##############################################################################################################\n";}
+        if (w.localStorage[i] !="") txt +=w.localStorage[i]+"\n\n-------------------------------------------------------------------------------------------------------------------------------------\n";}
     var dnl_file = new Date().toDateString()+"_data.doc";
     //set the name of the download  file
     document.getElementById('link').setAttribute("download",dnl_file);
