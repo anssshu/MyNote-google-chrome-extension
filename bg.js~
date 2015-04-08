@@ -7,10 +7,12 @@ var total=Number(storage.getItem('total') )|| 0;
 
 var storeData = function(dataString){
     //total=Number(storage.getItem('total') )|| 0;
-    storage.setItem(total,dataString);
+    if (String(dataString) !='' && String(dataString) !="undefined")
+    {
+        storage.setItem(total,dataString);
     total+=1;
     
-    storage.setItem("total",total);
+    storage.setItem("total",total);}
     
 }//end of storeData function
 
@@ -31,12 +33,13 @@ var updatePopupHtmlFile=function(){
 chrome.runtime.onMessage.addListener(
     function(request,sender,sendResponse){
        // alert('hi');
-        if (request.inComingData != ""){
+	var x=request.inComingData || "";
+        if (x != "" && typeof(x)=='string' && x !='undefined'){
             var dataString=request.inComingData;
             storeData(dataString);
             //updatePopupHtmlFile();
     
-            alert(request.inComingData);
+            //alert(request.inComingData);
             //conosle.log(storage);
 }
   else{  

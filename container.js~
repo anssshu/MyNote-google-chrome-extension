@@ -1,10 +1,4 @@
-/**
-This is th container script.it is loaded into every web page opend
-and can changge the page in view and access the DOM of the  page
-this is the entry point to the application
-@author Anshuman Mund
-anssshu@gmail.com
-**/
+
 var selectedText;
 ////////////////////////////////////////
 //create a popuptext

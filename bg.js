@@ -1,4 +1,8 @@
-
+/**
+This is the background script this is the main controller of the application
+@author Anshuman Mund
+anssshu@gmail.com
+**/
 var storage=window.localStorage;
 //get the total no of words store inside the storage
 var total=Number(storage.getItem('total') )|| 0;
